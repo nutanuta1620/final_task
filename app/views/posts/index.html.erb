@@ -1,0 +1,14 @@
+  <div class="boss">
+  <%= form_with url: '/posts', method: :post, class: "form-class", local: true do |form| %>
+    <%= form.text_field :memo, class: "left-form" %>
+    <%= form.submit "POST", class: "right-form" %>
+ <% end %>
+ 
+ <div class="content">
+ <% @posts.each do |post| %>
+   <div class="message">
+   <%= post.memo %>
+   </div>
+ <% end %>
+</div>
+</div>
